@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Text shadow utility for desktop icons */
+.text-shadow {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Animation for welcome modal */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Window transition */
+.window {
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.window:active {
+  transform: scale(1.005);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Desktop Icons Grid */
+.desktop-icons-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  width: fit-content;
+  margin-bottom: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .os-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  
+  .window {
+    width: 90vw !important;
+    height: 80vh !important;
+    left: 5vw !important;
+    top: 10vh !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .taskbar-apps {
+    display: none;
+  }
+
+  .system-tray {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .desktop-icons-container {
+    grid-template-columns: 1fr;
+  }
+
+  .window {
+    width: 100vw !important;
+    height: calc(100vh - 40px) !important;
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 0;
+  }
+}
