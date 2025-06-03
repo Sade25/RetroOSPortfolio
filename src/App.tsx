@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a2a6c] via-[#b21f1f] to-[#1a2a6c] flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <OSContainer />
       {showWelcome && <WelcomeModal onStart={startExperience} />}
     </div>

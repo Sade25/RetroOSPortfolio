@@ -25,7 +25,7 @@ const StartMenu: React.FC<StartMenuProps> = ({ onSelectItem }) => {
 
   return (
     <div className="start-menu absolute bottom-10 left-2.5 w-[240px] bg-[#32323a]/95 rounded-lg z-100 backdrop-blur-md shadow-2xl overflow-hidden">
-      <div className="start-menu-header h-12 bg-gradient-to-r from-[#3a6ea5] to-[#2a5a85] text-white flex items-center px-4 text-lg font-bold">
+      <div className="start-menu-header h-12 bg-gradient-to-r from-[#3a6ea5] to-[#2a5a85] text-white flex items-center px-4 text-base font-bold">
         Sade A. | Software Engineer
       </div>
       <div className="start-menu-items p-2 grid grid-cols-2 gap-2">

@@ -137,7 +137,7 @@ const OSContainer: React.FC = () => {
   };
 
   return (
-    <div className="os-container w-[95vw] h-[90vh] bg-gradient-to-b from-[#1e5799] to-[#207cca] rounded-lg shadow-2xl overflow-hidden flex flex-col relative">
+    <div className="os-container w-screen h-screen bg-gradient-to-b from-[#1e5799] to-[#207cca] overflow-hidden flex flex-col relative">
       <Desktop 
         windows={windows} 
         openWindow={openWindow}
